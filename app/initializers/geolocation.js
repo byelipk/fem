@@ -5,6 +5,10 @@
 //
 // Make the data available on the container.
 export function initialize(application) {
+  if (!window && window.navigator) {
+    return;
+  }
+
   const geo = navigator.geolocation;
 
   application.deferReadiness();

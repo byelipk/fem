@@ -15,4 +15,14 @@ App = Ember.Application.extend({
 
 loadInitializers(App, config.modulePrefix);
 
+
+// Exercise 1
+// Define a named export and a default export.
+define('math', [], function callback() {
+  return {
+    default: Math,
+    PI: Math.PI
+  };
+});
+
 export default App;
